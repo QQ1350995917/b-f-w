@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="SdCardPath">
+        <ignore path="src/main/java/com/bf/weather/db/DBOperate.java" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout/activity_city.xml" />
+    </issue>
+</lint>
