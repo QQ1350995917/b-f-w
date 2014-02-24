@@ -2,11 +2,9 @@
 <resources>
     <string name="hello">Hello b-f-w!</string>
     <string name="app_name">b-f-w</string>
-    
     <string name="string_province_list">省份列表</string>
     <string name="string_sub_city_list">城市列表</string>
     <string name="string_sub_city_search">请输入省份或城市名称</string>
     <string name="string_tip_choose_province">请先选择省份或直辖市</string>
     <string name="string_tip_city_choosed">已经选择</string>
-    
 </resources>
