@@ -19,7 +19,6 @@
             android:layout_weight="3"
             android:background="@drawable/btn_bg_more"
             android:clickable="true"
-            android:onClick="onClick"
             android:textSize="14sp"
 		    android:textColor="#FFFFFF"
             />
@@ -33,7 +32,6 @@
             android:layout_weight="3"
             android:background="@drawable/btn_bg_more"
             android:clickable="true"
-            android:onClick="onClick"
             android:textSize="14sp"
 		    android:textColor="#FFFFFF"
             />
@@ -43,16 +41,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/string_sub_city_search"
-            android:layout_weight="6"
+            android:layout_weight="5"
             android:visibility="gone"
+            android:background="@drawable/edit_bg"
             />
-        
+        <Button
+            android:id="@+id/bt_act_city_search" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:visibility="gone"
+			android:text="@string/string_search"            
+            />
         <Button
             android:id="@+id/bt_act_city_controller" 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             />
     </LinearLayout>
     
@@ -70,5 +76,20 @@
 	    android:layout_marginTop="10dp"
 	    android:listSelector="#00000000"
         android:background="#202020"
+        />
+    
+    <ListView 
+        android:id="@+id/lv_act_city_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_centerHorizontal="true"
+	    android:textFilterEnabled="true"
+	    android:verticalSpacing="10dp"
+	    android:layout_below="@id/rl_act_city_container"
+	    android:layout_marginTop="10dp"
+	    android:listSelector="#00000000"
+	    android:cacheColorHint="#00000000"  
+        android:background="#202020"
+        android:visibility="gone"
         />
 </RelativeLayout>

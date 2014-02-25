@@ -226,5 +226,48 @@ public class DBOperate {
 		return citys;
 	}
 	
+	/**
+	 * 根据关键字搜索
+	 * @author:DingPengwei
+	 * @date:Feb 25, 20147:15:12 PM
+	 * @param context
+	 * @param key
+	 * @return
+	 */
+	public static List<City> readBySearch(Context context, String key) {
+		List<City> citys = new ArrayList<City>();
+		DBHelper chatDBHelper = new DBHelper(context,null,null,1);
+		SQLiteDatabase db = null;
+		Cursor cursor = null;
+		try {
+			db = chatDBHelper.getWritableDatabase();
+			db.beginTransaction();
+			cursor = db.rawQuery("select * from city where cityname like '%" + key + "%'", null);
+			while(cursor.moveToNext()){
+				City citya = new City();
+				citya.setId(cursor.getString(cursor.getColumnIndex("id")));
+				citya.setCityId(cursor.getString(cursor.getColumnIndex("cityid")));
+				citya.setCityGreade(cursor.getString(cursor.getColumnIndex("citygrade")));
+				citya.setPearentId(cursor.getString(cursor.getColumnIndex("parentid")));
+				citya.setCityName(cursor.getString(cursor.getColumnIndex("cityname")));
+				citya.setCityCode(cursor.getString(cursor.getColumnIndex("citycode")));
+				citya.setCreateTime(cursor.getString(cursor.getColumnIndex("createtime")));
+				citya.setUpdateTime(cursor.getString(cursor.getColumnIndex("updatetime")));
+				citys.add(citya);
+			}
+			db.setTransactionSuccessful();
+		} catch (Exception e) {
+		} finally{
+			if(cursor != null){
+				cursor.close();
+			}
+			if(db != null){
+				db.endTransaction();
+				db.close();
+			}
+		}
+		return citys;
+	}
+	
 	
 }
