@@ -15,5 +15,32 @@
         android:contentDescription="@string/app_name"
         />
     
+    <TextView 
+        android:id="@+id/tv_act_splash_app_name_black_face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_black_face"
+        android:layout_below="@+id/iv_act_splash_logo"
+        android:textSize="40sp"
+        />
+    
+    <TextView 
+        android:id="@+id/tv_act_splash_app_name_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_weather"
+        android:layout_below="@+id/tv_act_splash_app_name_black_face"
+        android:layout_alignParentRight="true"
+        android:textSize="64sp"
+        />
+    
+    <TextView 
+        android:id="@+id/tv_act_splash_app_name_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+    
 
 </RelativeLayout>

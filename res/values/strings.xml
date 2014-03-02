@@ -8,4 +8,7 @@
     <string name="string_tip_choose_province">请先选择省份或直辖市</string>
     <string name="string_tip_city_choosed">已经选择</string>
     <string name="string_search">搜索</string>
+    <string name="string_black_face">BLACK FACE</string>
+    <string name="string_weather">WEATHER</string>
+    <string name="string_version">版本：</string>
 </resources>

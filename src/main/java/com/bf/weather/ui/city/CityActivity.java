@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -134,6 +135,9 @@ public class CityActivity extends BaseActivity implements OnClickListener{
 		if(search != null && !"".equals(search.toString().trim())){
 			currentCityAdtapter.reset(DBOperate.readBySearch(getApplicationContext(),search.toString().trim()));
 			currentCityAdtapter.notifyDataSetChanged();
+		}else{
+			Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+			this.et_act_city_search.setAnimation(shake);
 		}
 	}
 	
