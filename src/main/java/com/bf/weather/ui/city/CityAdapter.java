@@ -3,6 +3,7 @@ package com.bf.weather.ui.city;
 import java.util.List;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,34 @@ public class CityAdapter extends BaseAdapter{
 		}
 		view.setText(cityCurrents.get(position).getCityName());
 		view.setTag(cityCurrents.get(position).getCityId());
+		new StaredAsyncTask(view).execute(cityCurrents.get(position).getCityId());
 		return view;
 	}
+	
+    /**
+     * @Author:DingPengwei
+     * @Email:www.dingpengwei@gmail.com
+     * @DateCrate:Feb 25, 2014 20:20:24 PM
+     * @DateUpdate:Feb 25, 2014 20:20:24 PM
+     * @Des:异步线程判断一个城市是否已经被列为HOME
+     */
+    private final class StaredAsyncTask extends AsyncTask<String, Void, Boolean>{
+    	private TextView textView = null;
+    	public StaredAsyncTask(TextView textView){
+    		this.textView = textView;
+    	}
+		@Override
+		protected Boolean doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		protected void onPostExecute(Boolean result) {
+			if(result){
+				this.textView.setBackgroundResource(R.drawable.icon);
+			}
+			super.onPostExecute(result);
+		}
+    }
 }

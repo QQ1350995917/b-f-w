@@ -4,7 +4,6 @@ import java.util.List;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.LayoutInflater;
@@ -321,6 +320,7 @@ public class CityActivity extends BaseActivity implements OnClickListener{
     	@Override
     	public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
     		Toast.makeText(getApplicationContext(), getString(R.string.string_tip_city_choosed) + ((TextView)view).getText().toString(), Toast.LENGTH_SHORT).show();
+    		
     	}
     }
     
@@ -335,27 +335,6 @@ public class CityActivity extends BaseActivity implements OnClickListener{
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 			Toast.makeText(getApplicationContext(), getString(R.string.string_tip_city_choosed) + ((TextView)view).getText().toString(), Toast.LENGTH_SHORT).show();
-		}
-    }
-    
-    /**
-     * @Author:DingPengwei
-     * @Email:www.dingpengwei@gmail.com
-     * @DateCrate:Feb 25, 2014 20:20:24 PM
-     * @DateUpdate:Feb 25, 2014 20:20:24 PM
-     * @Des:异步线程判断一个城市是否已经被列为HOME
-     */
-    private final class HomedAsyncTask extends AsyncTask<String, Void, Boolean>{
-		@Override
-		protected Boolean doInBackground(String... params) {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		protected void onPostExecute(Boolean result) {
-			// TODO Auto-generated method stub
-			super.onPostExecute(result);
 		}
     }
     

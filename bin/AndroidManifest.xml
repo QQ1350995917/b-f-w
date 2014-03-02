@@ -22,7 +22,7 @@
     </activity>
     <!-- 城市 -->
     <activity android:name="com.bf.weather.ui.city.CityActivity" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
-    <activity android:name="com.bf.weather.ui.city.Transition3d" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
+    <activity android:name="com.bf.weather.ui.home.HomeActivity" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
   </application>
 
 </manifest>

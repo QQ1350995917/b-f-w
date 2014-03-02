@@ -44,6 +44,8 @@
             android:layout_weight="5"
             android:visibility="gone"
             android:background="@drawable/edit_bg"
+            android:singleLine="true"
+            android:maxLength="12"
             />
         <Button
             android:id="@+id/bt_act_city_search" 
