@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bf.weather.R;
-import com.bf.weather.ui.home.HomeActivity;
+import com.bf.weather.ui.city.CityActivity;
 
 /**
  * @Author:DingPengwei
@@ -90,7 +90,7 @@ public class SplashActivity extends BaseActivity implements OnClickListener{
 	 */
 	class SplashHandler implements Runnable {
         public void run() {
-            startActivity(new Intent(getApplication(), HomeActivity.class));
+            startActivity(new Intent(getApplication(), CityActivity.class));
             SplashActivity.this.finish();
             overridePendingTransition(R.anim.activity_fade_in, R.anim.activity_fade_out);
         }
